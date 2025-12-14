@@ -34,6 +34,18 @@ import {useState} from "react";
 function App() {
     //let title = '1670';
     //title = event.target.value;
+
+    const movies = [
+
+    {title: "Wall-E"},
+
+    {title: "Pulp Fiction"},
+
+    {title: "Matrix"},
+
+    {title: "1670"},
+
+];
      const [title, setTitle] = useState('Wall-E'); //hook
      //const [komunikat, setKomunikat] = useState("")
 
@@ -60,11 +72,14 @@ function App() {
     if (title.length === 0){
         message = '';
     }
-
+// tu mozna dać listę z filmami
 // struct komponentu
     return (
         <div>
             <h1>My favourite movies to watch</h1>
+            <ul>
+                {movies.map((movie) => <li key={movie.title}>{movie.title}</li>)}
+            </ul>
             <h2>My favourite movie for today is {title}</h2>
             <h3>My favourite movie for today is {title}</h3>
 
