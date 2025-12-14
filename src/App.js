@@ -45,14 +45,17 @@ function App() {
 
     let message= '';
     if (title.length < 5){
-        message = 'Title is too short';
+        message =  <div>Title is too short</div> //'Title is too short'; // pierwsza wersja
     }
     else if (title.length  < 10)
     {
-        message = 'Title is extra';
+        message =  <div>Title is extra</div>//'Title is extra';
     } else
     {
-        message = 'Title to long ';
+        message =  <div>Title to long </div>  //'Title to long ';
+    }
+    if (title.length === 0){
+        message = '';
     }
 
 // struct komponentu
@@ -61,7 +64,11 @@ function App() {
             <h1>My favourite movies to watch</h1>
             <h2>My favourite movie for today is {title}</h2>
             <h3>My favourite movie for today is {title}</h3>
-            <h3> {message}</h3>
+
+            {
+                //<h3> {message}</h3>  pierwsza wersja
+                title.length > 0 && <div>{message}</div>
+            }
 
 
             <input type="text" onChange={handleChange}/>
