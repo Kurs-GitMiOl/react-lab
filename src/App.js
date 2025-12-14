@@ -42,6 +42,9 @@ function App() {
         //console.log(event.target.value);
             setTitle(event.target.value);
     }
+    function handleClic(event){
+        alert(title);
+    }
 
     let message= '';
     if (title.length < 5){
@@ -71,7 +74,8 @@ function App() {
             }
 
 
-            <input type="text" onChange={handleChange}/>
+            <input type="text" onChange={(event) => setTitle(event.target.value)}/>
+             <button onClick={() => alert(title)}>Pokaż tytuł filmu!</button>
         </div>
     );
 }
