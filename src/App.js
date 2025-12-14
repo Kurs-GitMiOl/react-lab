@@ -75,7 +75,7 @@ function App() {
 
 
             <input type="text" onChange={(event) => setTitle(event.target.value)}/>
-             <button onClick={() => alert(title)}>Pokaż tytuł filmu!</button>
+             <button onClick={() => alert(title)}>Pokaż tytuł yyfilmu!</button>
         </div>
     );
 }
