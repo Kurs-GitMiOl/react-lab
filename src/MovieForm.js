@@ -13,7 +13,7 @@ export default function MovieForm(props) {
         setTitle('');
         setYear('');
     }
-/////////
+
     return <form onSubmit={addMovie}>
         <h2>Add movie</h2>
         <div>

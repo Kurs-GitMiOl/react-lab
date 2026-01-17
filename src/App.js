@@ -1,7 +1,9 @@
 import './App.css';
 import "milligram";
 import MovieForm from "./MovieForm";
+//import MovieList from "./MoviesList";
 import {useState} from "react";
+import {MoviesList} from "./MoviesList";
 
 function App() {
      //const [title, setTitle] = useState(''); // pierwszy etap
@@ -49,11 +51,11 @@ function App() {
     return (
         <div className="container">
 
-            <h1>My favourite movies to watch</h1>
-            <h2>Titles</h2>
-            <ul>
-                {movies.map(movie => <li key={movie.title}>{movie.title} {movie.year}</li>)}
-            </ul>
+            {/*<h1>My favourite movies to watch</h1>*/}
+            {/*<h2>Titles</h2>*/}
+            {/*<ul>*/}
+            {/*    {movies.map(movie => <li key={movie.title}>{movie.title} {movie.year}</li>)}*/}
+            {/*</ul>*/}
 
 
             {/*<h2>Add movie</h2>*/}
@@ -72,7 +74,9 @@ function App() {
             {/*/!*<button onClick={() => alert(title)}>Dodaj film</button>*!/*/}
 
             {/*<button onClick={handleAddmovie}>Dodaj film</button>*/}
+            <MoviesList movies={movies}/>
             <MovieForm onMovieSubmit={(movie) => setMovies([...movies, movie])}/>
+
         </div>
     );
 }
