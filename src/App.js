@@ -4,23 +4,25 @@ import MovieForm from "./MovieForm";
 import {useState} from "react";
 
 function App() {
-     const [title, setTitle] = useState(''); // pierwszy etap
-     const [year, setYear] = useState(''); // pierwszy etap
+     //const [title, setTitle] = useState(''); // pierwszy etap
+     //const [year, setYear] = useState(''); // pierwszy etap
      const [movies, setMovies] = useState([]);
     //const [year, setMovies] = useState([]);
 
-    let message;
-    if (title.length < 5) {
-        message = <div>Tutuł jest za krótki. Nagrywają takie filmy?</div>;
-    } else if (title.length < 15) {
-        message = <div>Tytuł jest ekstra, w sam raz na plakat przed kinem!</div>;
-    } else {
-        message = <div>Tytuł jest za długi, nikt tego nie zapamięta.</div>;
-    }
+    //const [movies, setMovies] = useState([]);
 
-    function handleChange(event) {
-        setTitle(event.target.value);
-    }
+    // let message;
+    // if (title.length < 5) {
+    //     message = <div>Tutuł jest za krótki. Nagrywają takie filmy?</div>;
+    // } else if (title.length < 15) {
+    //     message = <div>Tytuł jest ekstra, w sam raz na plakat przed kinem!</div>;
+    // } else {
+    //     message = <div>Tytuł jest za długi, nikt tego nie zapamięta.</div>;
+    // }
+    //
+    // function handleChange(event) {
+    //     setTitle(event.target.value);
+    // }
 
     // const movies = [
     //     {title: "Wall-E"},
@@ -29,20 +31,20 @@ function App() {
     //     {title: "1670"},
     // ];
 
-    function handleAddmovie(){
-        const  movie = {
-            title: title,
-            year: year,
-        };
+    // function handleAddmovie(){
+    //     const  movie = {
+    //         title: title,
+    //         year: year,
+    //     };
         //console.log(movie)
         //movies.push(movie);
         //setMovies(movies)
 
-        setMovies([...movies, movie]);
-        setTitle('')
-        setYear('')
-
-    }
+    //     setMovies([...movies, movie]);
+    //     setTitle('')
+    //     setYear('')
+    //
+    // }
 
     return (
         <div className="container">
@@ -52,6 +54,8 @@ function App() {
             <ul>
                 {movies.map(movie => <li key={movie.title}>{movie.title} {movie.year}</li>)}
             </ul>
+
+
             {/*<h2>Add movie</h2>*/}
             {/*<label>Tytuł</label>*/}
             {/*<input type="text" value={title} onChange={(event) => setTitle(event.target.value)}/>*/}
