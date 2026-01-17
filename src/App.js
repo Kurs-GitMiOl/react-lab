@@ -1,16 +1,13 @@
 import './App.css';
 import "milligram";
+import MovieForm from "./MovieForm";
 import {useState} from "react";
 
 function App() {
      const [title, setTitle] = useState(''); // pierwszy etap
      const [year, setYear] = useState(''); // pierwszy etap
-
-    const [movies, setMovies] = useState([]);
-
+     const [movies, setMovies] = useState([]);
     //const [year, setMovies] = useState([]);
-
-
 
     let message;
     if (title.length < 5) {
@@ -55,23 +52,23 @@ function App() {
             <ul>
                 {movies.map(movie => <li key={movie.title}>{movie.title} {movie.year}</li>)}
             </ul>
-            <h2>Add movie</h2>
-            <label>Tytuł</label>
-            <input type="text" value={title} onChange={(event) => setTitle(event.target.value)}/>
+            {/*<h2>Add movie</h2>*/}
+            {/*<label>Tytuł</label>*/}
+            {/*<input type="text" value={title} onChange={(event) => setTitle(event.target.value)}/>*/}
 
 
-            <label>Rok wydania {year}</label>
-            <input type="text" value={year} onChange={(event) => setYear(event.target.value)}/>
+            {/*<label>Rok wydania {year}</label>*/}
+            {/*<input type="text" value={year} onChange={(event) => setYear(event.target.value)}/>*/}
 
 
-            {/*{title.length > 0 && <div>{message}</div>}*/}
-            {/*{title.length > 0 && <div>{message}</div>}*/}
+            {/*/!*{title.length > 0 && <div>{message}</div>}*!/*/}
+            {/*/!*{title.length > 0 && <div>{message}</div>}*!/*/}
 
-            {/*<input type="text" value={title} onChange={handleChange}/>*/}
-            {/*<button onClick={() => alert(title)}>Dodaj film</button>*/}
+            {/*/!*<input type="text" value={title} onChange={handleChange}/>*!/*/}
+            {/*/!*<button onClick={() => alert(title)}>Dodaj film</button>*!/*/}
 
-            <button onClick={handleAddmovie}>Dodaj film</button>
-
+            {/*<button onClick={handleAddmovie}>Dodaj film</button>*/}
+            <MovieForm onMovieSubmit={(movie) => setMovies([...movies, movie])}/>
         </div>
     );
 }
