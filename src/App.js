@@ -10,6 +10,7 @@ function App() {
      //const [year, setYear] = useState(''); // pierwszy etap
      const [movies, setMovies] = useState([]);
     //const [year, setMovies] = useState([]);
+    const [addingMovie, setAddingMovie] = useState(false)// 5 punktów 1
 
     //const [movies, setMovies] = useState([]);
 
@@ -74,9 +75,12 @@ function App() {
             {/*/!*<button onClick={() => alert(title)}>Dodaj film</button>*!/*/}
 
             {/*<button onClick={handleAddmovie}>Dodaj film</button>*/}
-            <MoviesList movies={movies}/>
-            <MovieForm onMovieSubmit={(movie) => setMovies([...movies, movie])}/>
 
+
+            {/*<MoviesList movies={movies}/>*/}
+            {/*<MovieForm onMovieSubmit={(movie) => setMovies([...movies, movie])}/>*/}
+            {/*<h1>My favourite movies to watch</h1>*/}
+            {/*{movies.length === 0}*/}
         </div>
     );
 }
